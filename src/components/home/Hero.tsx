@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Play } from "lucide-react";
-import heroImage from "@/assets/hero-phone-inspection.jpg";
+import heroImage from "@/assets/hero-manufacturing.jpg";
 
 const Hero = () => {
   return (
@@ -61,7 +61,7 @@ const Hero = () => {
             <div className="relative rounded-lg overflow-hidden shadow-2xl">
               <img
                 src={heroImage}
-                alt="Inspector using mobile phone to capture car door panel — Q100.ai defect highlight"
+                alt="AI-powered quality inspection system for manufacturing"
                 className="w-full h-auto"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
