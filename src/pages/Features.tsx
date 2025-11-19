@@ -18,7 +18,7 @@ import {
   LineChart,
   Smartphone,
 } from "lucide-react";
-import featuresImage from "@/assets/features-workflow-diagram.jpg";
+import featuresImage from "@/assets/hero-phone-inspection.jpg";
 
 const Features = () => {
   const coreFeatures = [
@@ -49,9 +49,9 @@ const Features = () => {
     },
     {
       icon: Smartphone,
-      title: "Phone Images Supported",
+      title: "Mobile Phone Inspection",
       description:
-        "Operators can capture images on a mobile phone — our models handle hand movement and motion during capture and still deliver credible, traceable defect detection results.",
+        "Capture parts using any mobile phone — Q100.ai analyzes images perfectly even with hand movement or motion blur, delivering accurate and reliable inspection results anywhere.",
       benefits: [
         "Mobile phone image capture supported",
         "Robust to motion blur during capture",
@@ -147,7 +147,7 @@ const Features = () => {
             <div className="max-w-5xl mx-auto bg-white rounded-lg p-8">
               <img
                 src={featuresImage}
-                alt="Q100.ai workflow: Camera to AI device to dashboard to PLC/MES integration"
+                alt="Inspector using mobile phone to capture car door panel — Q100.ai defect highlight"
                 className="w-full"
               />
             </div>

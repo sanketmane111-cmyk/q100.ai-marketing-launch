@@ -28,7 +28,7 @@ const Pricing = () => {
         "Priority support",
         "Advanced reporting",
       ],
-      cta: "Request Demo",
+      cta: "Contact Sales",
       highlighted: true,
     },
   ];
@@ -45,7 +45,7 @@ const Pricing = () => {
               Simple, Transparent <span className="text-primary">Pricing</span>
             </h1>
             <p className="text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto">
-              Flexible licensing options designed to scale with your manufacturing needs
+              Flexible options designed to scale with your manufacturing needs
             </p>
           </div>
         </section>

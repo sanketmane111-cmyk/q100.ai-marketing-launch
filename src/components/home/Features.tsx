@@ -15,8 +15,8 @@ const Features = () => {
     },
     {
       icon: Smartphone,
-      title: "Phone Images Supported",
-      description: "Operators can capture images on a mobile phone — our models handle hand movement and motion during capture and still deliver credible, traceable defect detection results.",
+      title: "Mobile Phone Inspection",
+      description: "Capture parts using any mobile phone — Q100.ai analyzes images perfectly even with hand movement or motion blur, delivering accurate and reliable inspection results anywhere.",
     },
     {
       icon: Settings,
@@ -29,14 +29,9 @@ const Features = () => {
       description: "Exports comprehensive QA reports with full traceability for compliance and quality management.",
     },
     {
-      icon: Zap,
-      title: "Small Defect Detection",
-      description: "Real-time absence/presence checks and small defect detection at production line speed.",
-    },
-    {
       icon: Shield,
       title: "Enterprise Integration",
-      description: "Seamless integration with PLCs, robots, and MES systems for complete automation.",
+      description: "Seamless integration with PLCs and MES systems for complete automation.",
     },
   ];
 
