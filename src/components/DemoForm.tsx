@@ -99,14 +99,19 @@ const DemoForm = () => {
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="phone">Phone Number</Label>
+        <Label htmlFor="phone">Phone Number *</Label>
         <Input
           id="phone"
           name="phone"
           type="tel"
-          placeholder="+1 (234) 567-8900"
+          required
+          pattern="^\+91[6-9]\d{9}$"
+          placeholder="+91 98765 43210"
           className="bg-background"
         />
+        <p className="text-xs text-muted-foreground">
+          We cater to Indian customers — please enter a +91 mobile number.
+        </p>
       </div>
 
       <div className="space-y-2">

@@ -118,18 +118,26 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-secondary-foreground/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-secondary-foreground/60">
-          <p>&copy; {currentYear} Q100.ai. All rights reserved.</p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-accent transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="hover:text-accent transition-colors">
-              Terms of Service
-            </a>
-            <a href="#" className="hover:text-accent transition-colors">
-              Cookies
-            </a>
+        <div className="border-t border-secondary-foreground/20 mt-12 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-secondary-foreground/60 gap-4">
+            <div className="flex flex-col md:flex-row items-center gap-4">
+              <p>&copy; {currentYear} Q100.ai. All rights reserved.</p>
+              <div className="flex items-center space-x-2 text-secondary-foreground/80">
+                <span className="text-lg">🇮🇳</span>
+                <span className="font-semibold">Made in India</span>
+              </div>
+            </div>
+            <div className="flex space-x-6">
+              <a href="#" className="hover:text-accent transition-colors">
+                Privacy Policy
+              </a>
+              <a href="#" className="hover:text-accent transition-colors">
+                Terms of Service
+              </a>
+              <a href="#" className="hover:text-accent transition-colors">
+                Cookies
+              </a>
+            </div>
           </div>
         </div>
       </div>
