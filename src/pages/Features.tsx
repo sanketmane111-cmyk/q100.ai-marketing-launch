@@ -14,10 +14,11 @@ import {
   GitMerge,
   CheckCircle2,
   AlertCircle,
-  Camera,
+  Smartphone,
   LineChart,
 } from "lucide-react";
 import aiInspectionImage from "@/assets/ai-inspection.jpg";
+import mobileInspectionImage from "@/assets/mobile-inspection.jpg";
 
 const Features = () => {
   const coreFeatures = [
@@ -46,18 +47,6 @@ const Features = () => {
       ],
     },
     {
-      icon: Camera,
-      title: "Mobile Phone Inspection",
-      description:
-        "Operators can capture images on a mobile phone — our models handle hand movement and motion during capture for credible, traceable defect detection.",
-      benefits: [
-        "Robust to motion blur — credible results even if operator moves while capturing",
-        "No need for expensive fixed camera setups",
-        "Flexible inspection at any production point",
-        "Real-time defect detection on mobile devices",
-      ],
-    },
-    {
       icon: Zap,
       title: "Real-Time Detection",
       description:
@@ -67,6 +56,18 @@ const Features = () => {
         "Zero bottlenecks in production",
         "Instant pass/fail decisions",
         "Continuous learning from data",
+      ],
+    },
+    {
+      icon: Settings,
+      title: "Easy Configuration",
+      description:
+        "Intuitive interface for adding new specs and adjusting quality parameters without IT support.",
+      benefits: [
+        "Visual configuration tools",
+        "Template-based setup",
+        "Multi-user role management",
+        "Cloud-based updates",
       ],
     },
     {
@@ -135,6 +136,55 @@ const Features = () => {
                 alt="AI Quality Inspection System"
                 className="w-full h-auto"
               />
+            </div>
+          </div>
+        </section>
+
+        {/* Mobile Phone Inspection Feature */}
+        <section className="py-16 lg:py-24 bg-gradient-to-br from-primary/5 via-background to-accent/5">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              <div className="order-2 lg:order-1">
+                <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center mb-6">
+                  <Smartphone className="w-7 h-7 text-accent" />
+                </div>
+                <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+                  Capture Parts Using Any <span className="text-accent">Mobile Phone</span>
+                </h2>
+                <p className="text-lg text-muted-foreground mb-6">
+                  Q100.ai analyzes images perfectly even with hand movement or motion blur, delivering accurate and reliable inspection results anywhere.
+                </p>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle2 className="w-5 h-5 text-accent mt-1 shrink-0" />
+                    <span>No expensive fixed camera setups required</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle2 className="w-5 h-5 text-accent mt-1 shrink-0" />
+                    <span>Robust to motion blur — credible results even if operator moves while capturing</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle2 className="w-5 h-5 text-accent mt-1 shrink-0" />
+                    <span>Flexible inspection at any production point</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle2 className="w-5 h-5 text-accent mt-1 shrink-0" />
+                    <span>Instant defect detection results on mobile devices</span>
+                  </li>
+                </ul>
+                <Button variant="cta" size="lg" asChild>
+                  <Link to="/demo">See Mobile Inspection Demo</Link>
+                </Button>
+              </div>
+              <div className="order-1 lg:order-2">
+                <div className="rounded-lg overflow-hidden shadow-2xl">
+                  <img
+                    src={mobileInspectionImage}
+                    alt="Inspector using mobile phone to inspect car door panel"
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </section>
