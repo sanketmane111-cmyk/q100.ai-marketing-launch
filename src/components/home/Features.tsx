@@ -1,4 +1,4 @@
-import { Clock, Target, Settings, FileCheck, Zap, Shield } from "lucide-react";
+import { Clock, Target, Settings, FileCheck, Zap, Shield, Smartphone } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Features = () => {
@@ -6,12 +6,17 @@ const Features = () => {
     {
       icon: Clock,
       title: "2-Hour Setup",
-      description: "Add a new part and be fully operational within 2 hours. No lengthy training or complex configuration required.",
+      description: "Fast standalone setup — add a new part and be fully operational within 2 hours. No lengthy training or complex configuration required.",
     },
     {
       icon: Target,
       title: "100+ Categories",
       description: "Supports 100+ product categories and defect types out-of-the-box. From automotive to white goods.",
+    },
+    {
+      icon: Smartphone,
+      title: "Phone Images Supported",
+      description: "Operators can capture images on a mobile phone — our models handle hand movement and motion during capture and still deliver credible, traceable defect detection results.",
     },
     {
       icon: Settings,
@@ -25,8 +30,8 @@ const Features = () => {
     },
     {
       icon: Zap,
-      title: "Fast Detection",
-      description: "Real-time absence/presence checks and surface defect detection at production line speed.",
+      title: "Small Defect Detection",
+      description: "Real-time absence/presence checks and small defect detection at production line speed.",
     },
     {
       icon: Shield,

@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Play } from "lucide-react";
-import heroImage from "@/assets/hero-manufacturing.jpg";
+import heroImage from "@/assets/hero-phone-inspection.jpg";
 
 const Hero = () => {
   return (
@@ -22,8 +22,8 @@ const Hero = () => {
             </h1>
             
             <p className="text-lg lg:text-xl text-muted-foreground max-w-xl">
-              End-of-line AI quality inspection that detects defects and ensures compliance. 
-              Operational in 2 hours with 100+ product categories supported out-of-the-box.
+              End-of-line AI quality inspection that detects small defects and ensures compliance. 
+              Fast standalone setup — add a new part and be operational within 2 hours with 100+ product categories supported out-of-the-box.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -61,7 +61,7 @@ const Hero = () => {
             <div className="relative rounded-lg overflow-hidden shadow-2xl">
               <img
                 src={heroImage}
-                alt="AI Quality Inspection in Manufacturing"
+                alt="Inspector using mobile phone to capture car door panel — Q100.ai defect highlight"
                 className="w-full h-auto"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />

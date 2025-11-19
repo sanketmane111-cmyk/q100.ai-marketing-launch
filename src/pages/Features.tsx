@@ -16,16 +16,17 @@ import {
   AlertCircle,
   Camera,
   LineChart,
+  Smartphone,
 } from "lucide-react";
-import aiInspectionImage from "@/assets/ai-inspection.jpg";
+import featuresImage from "@/assets/features-workflow-diagram.jpg";
 
 const Features = () => {
   const coreFeatures = [
     {
       icon: Clock,
-      title: "Rapid 2-Hour Setup",
+      title: "2-Hour Setup",
       description:
-        "Deploy Q100.ai at your production line with minimal downtime. Add new parts and be operational in just 2 hours.",
+        "Fast standalone setup — add a new part and be fully operational within 2 hours. Deploy Q100.ai at your production line with minimal downtime.",
       benefits: [
         "Pre-trained AI models for common defects",
         "Simple configuration interface",
@@ -40,9 +41,22 @@ const Features = () => {
         "Comprehensive defect detection covering the widest range of quality issues in manufacturing.",
       benefits: [
         "Surface defects (scratches, dents, discoloration)",
+        "Small defect detection with high accuracy",
         "Assembly errors and missing components",
         "Dimensional anomalies",
         "Contamination and foreign objects",
+      ],
+    },
+    {
+      icon: Smartphone,
+      title: "Phone Images Supported",
+      description:
+        "Operators can capture images on a mobile phone — our models handle hand movement and motion during capture and still deliver credible, traceable defect detection results.",
+      benefits: [
+        "Mobile phone image capture supported",
+        "Robust to motion blur during capture",
+        "Credible results even with operator movement",
+        "No specialized camera hardware required",
       ],
     },
     {
@@ -59,11 +73,12 @@ const Features = () => {
     },
     {
       icon: Zap,
-      title: "Real-Time Detection",
+      title: "Small Defect Detection",
       description:
-        "Lightning-fast inspection at production line speed without compromising accuracy.",
+        "Lightning-fast inspection at production line speed without compromising accuracy. Detects even small defects with precision.",
       benefits: [
         "< 100ms processing time per part",
+        "Small defect detection capability",
         "Zero bottlenecks in production",
         "Instant pass/fail decisions",
         "Continuous learning from data",
@@ -122,18 +137,18 @@ const Features = () => {
           <div className="container mx-auto px-4 lg:px-8">
             <div className="max-w-4xl mx-auto text-center mb-12">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
-                Comprehensive <span className="text-primary">Quality Inspection</span> Features
+                Powerful <span className="text-primary">Features</span> for Manufacturing Excellence
               </h1>
               <p className="text-lg lg:text-xl text-muted-foreground">
-                Everything you need for complete quality control automation in one powerful platform
+                Advanced AI-powered quality inspection with enterprise-grade capabilities. Fast standalone setup — add a new part and be operational within 2 hours.
               </p>
             </div>
-
-            <div className="rounded-lg overflow-hidden shadow-2xl max-w-4xl mx-auto">
+            
+            <div className="max-w-5xl mx-auto bg-white rounded-lg p-8">
               <img
-                src={aiInspectionImage}
-                alt="AI Quality Inspection System"
-                className="w-full h-auto"
+                src={featuresImage}
+                alt="Q100.ai workflow: Camera to AI device to dashboard to PLC/MES integration"
+                className="w-full"
               />
             </div>
           </div>
