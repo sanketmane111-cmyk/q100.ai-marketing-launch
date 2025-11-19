@@ -47,14 +47,14 @@ const Features = () => {
     },
     {
       icon: Camera,
-      title: "Advanced Vision System",
+      title: "Mobile Phone Inspection",
       description:
-        "State-of-the-art computer vision powered by deep learning algorithms for unmatched accuracy.",
+        "Operators can capture images on a mobile phone — our models handle hand movement and motion during capture for credible, traceable defect detection.",
       benefits: [
-        "Multi-angle inspection capability",
-        "High-resolution defect detection",
-        "Real-time image processing",
-        "Adaptive lighting compensation",
+        "Robust to motion blur — credible results even if operator moves while capturing",
+        "No need for expensive fixed camera setups",
+        "Flexible inspection at any production point",
+        "Real-time defect detection on mobile devices",
       ],
     },
     {
