@@ -1,4 +1,4 @@
-import { Clock, Target, Settings, FileCheck, Zap, Shield, Smartphone } from "lucide-react";
+import { Clock, Target, Settings, FileCheck, Zap, Shield } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Features = () => {
@@ -6,17 +6,12 @@ const Features = () => {
     {
       icon: Clock,
       title: "2-Hour Setup",
-      description: "Fast standalone setup — add a new part and be fully operational within 2 hours. No lengthy training or complex configuration required.",
+      description: "Add a new part and be fully operational within 2 hours. No lengthy training or complex configuration required.",
     },
     {
       icon: Target,
       title: "100+ Categories",
       description: "Supports 100+ product categories and defect types out-of-the-box. From automotive to white goods.",
-    },
-    {
-      icon: Smartphone,
-      title: "Mobile Phone Inspection",
-      description: "Capture parts using any mobile phone — Q100.ai analyzes images perfectly even with hand movement or motion blur, delivering accurate and reliable inspection results anywhere.",
     },
     {
       icon: Settings,
@@ -29,9 +24,14 @@ const Features = () => {
       description: "Exports comprehensive QA reports with full traceability for compliance and quality management.",
     },
     {
+      icon: Zap,
+      title: "Fast Detection",
+      description: "Real-time absence/presence checks and surface defect detection at production line speed.",
+    },
+    {
       icon: Shield,
       title: "Enterprise Integration",
-      description: "Seamless integration with PLCs and MES systems for complete automation.",
+      description: "Seamless integration with PLCs, robots, and MES systems for complete automation.",
     },
   ];
 

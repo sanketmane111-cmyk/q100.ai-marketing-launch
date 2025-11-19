@@ -15,38 +15,10 @@ import { Send } from "lucide-react";
 
 const DemoForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [phone, setPhone] = useState("+91");
   const { toast } = useToast();
-
-  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    let value = e.target.value;
-    
-    // Always ensure +91 prefix
-    if (!value.startsWith("+91")) {
-      value = "+91" + value.replace(/^\+?91?/, "");
-    }
-    
-    setPhone(value);
-  };
-
-  const validateIndianPhone = (phoneNumber: string): boolean => {
-    const indianPhoneRegex = /^\+91[6-9]\d{9}$/;
-    return indianPhoneRegex.test(phoneNumber);
-  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
-    // Validate Indian phone number
-    if (!validateIndianPhone(phone)) {
-      toast({
-        title: "Invalid Phone Number",
-        description: "Please enter a valid Indian mobile number starting with +91 followed by 10 digits (6-9 for first digit).",
-        variant: "destructive",
-      });
-      return;
-    }
-    
     setIsSubmitting(true);
 
     // Simulate form submission
@@ -59,7 +31,6 @@ const DemoForm = () => {
 
     setIsSubmitting(false);
     (e.target as HTMLFormElement).reset();
-    setPhone("+91");
   };
 
   return (
@@ -128,20 +99,14 @@ const DemoForm = () => {
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="phone">Phone Number *</Label>
+        <Label htmlFor="phone">Phone Number</Label>
         <Input
           id="phone"
           name="phone"
           type="tel"
-          required
-          value={phone}
-          onChange={handlePhoneChange}
-          placeholder="+91 98765 43210"
+          placeholder="+1 (234) 567-8900"
           className="bg-background"
         />
-        <p className="text-xs text-muted-foreground">
-          We cater to Indian customers — please enter a +91 mobile number.
-        </p>
       </div>
 
       <div className="space-y-2">

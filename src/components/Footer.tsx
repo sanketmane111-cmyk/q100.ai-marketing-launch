@@ -19,19 +19,19 @@ const Footer = () => {
             <div className="space-y-2 text-sm text-secondary-foreground/80">
               <div className="flex items-center space-x-2">
                 <Mail size={16} />
-                <a href="mailto:sales@augle.ai" className="hover:text-accent transition-colors">
-                  sales@augle.ai
+                <a href="mailto:info@q100.ai" className="hover:text-accent transition-colors">
+                  info@q100.ai
                 </a>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone size={16} />
-                <a href="tel:+918108148186" className="hover:text-accent transition-colors">
-                  +91 8108 148186
+                <a href="tel:+1234567890" className="hover:text-accent transition-colors">
+                  +1 (234) 567-890
                 </a>
               </div>
-              <div className="flex items-start space-x-2">
-                <MapPin size={16} className="mt-0.5 shrink-0" />
-                <span>5th Floor, SINE Office, SINE, IRCC, IDC - Rahul Bajaj Technology Innovation Centre, YP Rd, IIT Area, Powai, Mumbai, Maharashtra 400076</span>
+              <div className="flex items-center space-x-2">
+                <MapPin size={16} />
+                <span>Industrial Park, Tech Valley</span>
               </div>
             </div>
           </div>
@@ -118,26 +118,18 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-secondary-foreground/20 mt-12 pt-8">
-          <div className="flex flex-col items-center space-y-4 mb-6">
-            <div className="flex items-center space-x-2 text-sm text-secondary-foreground/80">
-              <span className="text-lg">🇮🇳</span>
-              <span className="font-medium">Made in India — Designed and built in India</span>
-            </div>
-          </div>
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-sm text-secondary-foreground/60">
-            <p>&copy; {currentYear} Q100.ai. All rights reserved.</p>
-            <div className="flex space-x-6">
-              <a href="#" className="hover:text-accent transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="hover:text-accent transition-colors">
-                Terms of Service
-              </a>
-              <a href="#" className="hover:text-accent transition-colors">
-                Cookies
-              </a>
-            </div>
+        <div className="border-t border-secondary-foreground/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-secondary-foreground/60">
+          <p>&copy; {currentYear} Q100.ai. All rights reserved.</p>
+          <div className="flex space-x-6 mt-4 md:mt-0">
+            <a href="#" className="hover:text-accent transition-colors">
+              Privacy Policy
+            </a>
+            <a href="#" className="hover:text-accent transition-colors">
+              Terms of Service
+            </a>
+            <a href="#" className="hover:text-accent transition-colors">
+              Cookies
+            </a>
           </div>
         </div>
       </div>

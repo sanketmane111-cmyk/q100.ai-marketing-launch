@@ -3,36 +3,88 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, HelpCircle } from "lucide-react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const Pricing = () => {
   const pricingPlans = [
     {
       name: "Starter",
       description: "Perfect for pilot programs and small production lines",
+      price: "Custom",
       features: [
-        "Basic inspection features",
-        "100+ product categories",
-        "Phone & camera input supported",
-        "2-hour setup time",
+        "Single production line",
+        "Up to 50,000 inspections/month",
+        "100+ defect categories",
+        "Basic reporting",
+        "Email support",
+        "Standard SLA",
       ],
-      cta: "Contact Sales",
+      cta: "Start Pilot Program",
       highlighted: false,
     },
     {
       name: "Professional",
       description: "Ideal for growing manufacturers",
+      price: "Custom",
       features: [
-        "Full category support",
-        "Integrations (PLCs/MES)",
+        "Up to 5 production lines",
+        "Unlimited inspections",
+        "Custom defect training",
+        "Advanced analytics dashboard",
+        "PLC & MES integration",
         "Priority support",
-        "Advanced reporting",
+        "99.5% uptime SLA",
+      ],
+      cta: "Request Demo",
+      highlighted: true,
+    },
+    {
+      name: "Enterprise",
+      description: "For large-scale manufacturing operations",
+      price: "Custom",
+      features: [
+        "Unlimited production lines",
+        "Multi-site deployment",
+        "Custom AI model training",
+        "Dedicated success manager",
+        "24/7 premium support",
+        "Custom integrations",
+        "99.9% uptime SLA",
+        "On-premise deployment option",
       ],
       cta: "Contact Sales",
-      highlighted: true,
+      highlighted: false,
     },
   ];
 
+  const addOns = [
+    {
+      name: "Advanced AI Training",
+      description: "Custom defect detection models for your specific products",
+      tooltip: "Train Q100.ai to detect unique defects specific to your production process",
+    },
+    {
+      name: "Multi-Site License",
+      description: "Deploy across multiple manufacturing facilities",
+      tooltip: "Centralized management and reporting across all your plants",
+    },
+    {
+      name: "Premium Support",
+      description: "24/7 technical support with guaranteed response times",
+      tooltip: "< 1 hour response time for critical issues",
+    },
+    {
+      name: "Custom Integration",
+      description: "Integration with legacy systems and custom ERP solutions",
+      tooltip: "Our team will build custom connectors for your unique infrastructure",
+    },
+  ];
 
   return (
     <div className="min-h-screen">
@@ -45,7 +97,7 @@ const Pricing = () => {
               Simple, Transparent <span className="text-primary">Pricing</span>
             </h1>
             <p className="text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto">
-              Flexible options designed to scale with your manufacturing needs
+              Flexible licensing options designed to scale with your manufacturing needs
             </p>
           </div>
         </section>
@@ -53,7 +105,7 @@ const Pricing = () => {
         {/* Pricing Cards */}
         <section className="py-16 lg:py-24">
           <div className="container mx-auto px-4 lg:px-8">
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {pricingPlans.map((plan, index) => (
                 <Card
                   key={index}
@@ -75,7 +127,8 @@ const Pricing = () => {
                     <p className="text-sm text-muted-foreground mb-6">{plan.description}</p>
                     
                     <div className="mb-6">
-                      <div className="text-sm text-muted-foreground">Contact sales for pricing</div>
+                      <div className="text-4xl font-display font-bold">{plan.price}</div>
+                      <div className="text-sm text-muted-foreground">Contact for quote</div>
                     </div>
 
                     <Button
@@ -98,6 +151,43 @@ const Pricing = () => {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Add-ons */}
+        <section className="py-16 lg:py-24 bg-muted/50">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+                Optional <span className="text-primary">Add-ons</span>
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Enhance your Q100.ai deployment with additional services
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <TooltipProvider>
+                {addOns.map((addon, index) => (
+                  <Card key={index} className="border-border">
+                    <CardContent className="p-6">
+                      <div className="flex items-start justify-between mb-2">
+                        <h3 className="text-lg font-display font-semibold">{addon.name}</h3>
+                        <Tooltip>
+                          <TooltipTrigger>
+                            <HelpCircle className="w-5 h-5 text-muted-foreground" />
+                          </TooltipTrigger>
+                          <TooltipContent>
+                            <p className="max-w-xs">{addon.tooltip}</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </div>
+                      <p className="text-sm text-muted-foreground">{addon.description}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </TooltipProvider>
             </div>
           </div>
         </section>
