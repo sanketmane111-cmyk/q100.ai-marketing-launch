@@ -129,14 +129,6 @@ const Features = () => {
                 Everything you need for complete quality control automation in one powerful platform
               </p>
             </div>
-
-            <div className="rounded-lg overflow-hidden shadow-2xl max-w-4xl mx-auto">
-              <img
-                src={aiInspectionImage}
-                alt="AI Quality Inspection System"
-                className="w-full h-auto"
-              />
-            </div>
           </div>
         </section>
 
@@ -161,7 +153,7 @@ const Features = () => {
                   </li>
                   <li className="flex items-start space-x-3">
                     <CheckCircle2 className="w-5 h-5 text-accent mt-1 shrink-0" />
-                    <span>Robust to motion blur — credible results even if operator moves while capturing</span>
+                    <span>Credible results even if operator moves while capturing</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <CheckCircle2 className="w-5 h-5 text-accent mt-1 shrink-0" />
