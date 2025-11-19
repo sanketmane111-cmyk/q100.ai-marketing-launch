@@ -19,19 +19,19 @@ const Footer = () => {
             <div className="space-y-2 text-sm text-secondary-foreground/80">
               <div className="flex items-center space-x-2">
                 <Mail size={16} />
-                <a href="mailto:info@q100.ai" className="hover:text-accent transition-colors">
-                  info@q100.ai
+                <a href="mailto:sales@augle.ai" className="hover:text-accent transition-colors">
+                  sales@augle.ai
                 </a>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone size={16} />
-                <a href="tel:+1234567890" className="hover:text-accent transition-colors">
-                  +1 (234) 567-890
+                <a href="tel:+918108148186" className="hover:text-accent transition-colors">
+                  +91 8108 148186
                 </a>
               </div>
-              <div className="flex items-center space-x-2">
-                <MapPin size={16} />
-                <span>Industrial Park, Tech Valley</span>
+              <div className="flex items-start space-x-2">
+                <MapPin size={16} className="mt-0.5 shrink-0" />
+                <span>5th Floor, SINE Office, IRCC, IDC - Rahul Bajaj Technology Innovation Centre, YP Rd, IIT Area, Powai, Mumbai, Maharashtra 400076</span>
               </div>
             </div>
           </div>
